@@ -951,7 +951,7 @@ var container_projetos = document.getElementById("container_projetos");
 $(document).ready(function load_data(){
     //var page = parseInt(window.location.pathname.split('/')[2]);
     var page = parseInt(replaceAll(window.location.search, '?', ''));
-    if(isNaN(page)){window.location.href = 'https://policiarcc-system-ins.vercel.app/projetos/historico/1'; return}
+    if(isNaN(page)){window.location.href = 'https://policiarcc-system-ins.vercel.app/projetos/historico?1'; return}
     var start = parseInt((page - 1) * 33)
     
     fetch('https://opensheet.elk.sh/1F4mlgHFmu3-PkQxYvN2LIRHDluMH5m0een8rBRTlbjs/[X]_Projetos')
