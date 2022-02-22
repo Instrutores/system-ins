@@ -958,8 +958,8 @@ $(document).ready(function load_data(){
     .then(res => res.json())
     .then(data => {
         var numPages = Math.ceil(data.length/33);
-        if(page > numPages){window.location.href = 'https://www.policiarcc.com/h44-ins-projetos/' + numPages; return}
-        if(page < 1){window.location.href = 'https://www.policiarcc.com/h44-ins-projetos/1'; return}
+        if(page > numPages){window.location.href = 'https://policiarcc-system-ins.vercel.app/projetos/historico?' + numPages; return}
+        if(page < 1){window.location.href = 'https://policiarcc-system-ins.vercel.app/projetos/historico?1'; return}
         var receive = data.splice(start, 33);
         fill_Pagination(numPages, page);
         receive.forEach(row => {
@@ -1135,7 +1135,7 @@ function fill_Pagination(totalPages, page){
 //fill_Pagination(5,1);
 
 function openPage(page){
-    window.location.href = 'https://www.policiarcc.com/h44-ins-projetos/' + page;
+    window.location.href = 'https://policiarcc-system-ins.vercel.app/projetos/historico?' + page;
 }
 </script>
 </body>
